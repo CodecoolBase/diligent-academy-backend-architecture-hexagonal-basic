@@ -13,7 +13,7 @@
 
 - This business logic has two ports.
 - One is responsible for greeting (primary port). It should define a `greet` method with a name string parameter and should return nothing.
-- Another is responsible for storing the message (secondary port). It should define a `store` method with a greeting string parameter and should return nothing. 
+- Another is responsible for storing the message (secondary port). It should define a `save` method with a greeting string parameter and should return a void. 
 
 ## Task 2: Add the ports to the business logic
 
@@ -35,7 +35,25 @@
 
 ## Task 5: Wire up the things
 
-- Use the `args.ts` to wire up everything.
+- Use the `src/args.ts` to wire up everything.
 - This file should initiate the service, the business logic with the proper secondary adapters.
 - It also pass the service to the primary adapter to use it.
-- Run your code with the `npm run ts -- args.ts Alice` command.
+- Run your code with the `npm run ts -- src/args.ts Alice` command.
+
+## Task 6: Create test for the service
+
+- Create some tests for the service.
+
+## Task 6: Add a new prompt application to the program
+
+- Create a new application in `src/prompt.ts`.
+- This application should use the same service, but right now the user enter their name
+in a simple prompt (`prompt-sync`). 
+- This application really saves the greetings into the `greetings.txt` file. Each greeting is a new line.
+
+## Task 7: Add a new server application to the program.
+
+- Create a new application in `src/server.ts`.
+- This application should accept a `POST /greet` request. The request body is a JSON document with a name key.
+- The response should be a JSON document too, with a greeting key, its value is the greeting.
+- The greetings should be logged also the greetings JSON. It is a JSON array, every element of the array is a greeting.
