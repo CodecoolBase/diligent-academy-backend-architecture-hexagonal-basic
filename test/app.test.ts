@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import createApp from "../src/app"
+import createApp from "../src/primary-adapters/fastify-api-primary-adapter"
 
 let app: FastifyInstance | undefined;
 

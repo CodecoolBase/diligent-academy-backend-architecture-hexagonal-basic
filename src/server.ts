@@ -1,4 +1,4 @@
-import createApp from "./app";
+import createApp from "./primary-adapters/fastify-api-primary-adapter";
 
 const PORT = 4400;
 
