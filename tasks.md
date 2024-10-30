@@ -44,14 +44,14 @@
 
 - Create some tests for the service.
 
-## Task 6: Add a new prompt application to the program
+## Task 7: Add a new prompt application to the program
 
 - Create a new application in `src/prompt.ts`.
 - This application should use the same service, but right now the user enter their name
 in a simple prompt (`prompt-sync`). 
 - This application really saves the greetings into the `greetings.txt` file. Each greeting is a new line.
 
-## Task 7: Add a new server application to the program.
+## Task 8: Add a new server application to the program.
 
 - Create a new application in `src/server.ts`.
 - This application should accept a `POST /greet` request. The request body is a JSON document with a name key.
